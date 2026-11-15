@@ -1,0 +1,30 @@
+{
+  "catalog": {
+    "entry": "/release"
+  },
+  "resources": {
+    "/primary": {
+      "file": "primary.bin",
+      "type": "text/plain"
+    },
+    "/corpus/part-a": {
+      "file": "resource-01.bin",
+      "type": "text/plain",
+      "chunkSize": 3
+    },
+    "/corpus/part-b": {
+      "file": "resource-02.bin",
+      "type": "text/plain"
+    },
+    "/release": {
+      "file": "resource-03.bin",
+      "type": "application/json",
+      "phases": {
+        "1": {
+          "file": null,
+          "body": "{\"edition\":\"2026-11\",\"files\":[{\"id\":\"a\",\"path\":\"/primary\",\"revision\":2},{\"id\":\"b\",\"path\":\"/corpus/part-b\",\"revision\":1}]}"
+        }
+      }
+    }
+  }
+}
